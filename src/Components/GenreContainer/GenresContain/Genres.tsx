@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
-import {IGenre} from "../../interfaces";
-import {genreService} from "../../services";
-import {Genre} from "./Genre";
+import {IGenre} from "../../../interfaces";
+import {genreService} from "../../../services";
+import {Genre} from "../GenreContain/Genre";
+import css from './Genres.module.css'
 
 export const Genres = () => {
 
@@ -11,7 +12,7 @@ export const Genres = () => {
         genreService.getAll().then(({data: {genres}})=> setGenres(genres))
     },[])
     return (
-        <div>
+        <div className={css.Genres}>
             {
                 genres && genres.map(item => <Genre key={item.id} item={item}/>)
             }
