@@ -1,10 +1,7 @@
-export const Movies = () => {
-
-
+export const Search = () => {
     return (
         <div>
-movies
+            App
         </div>
     );
 };
-

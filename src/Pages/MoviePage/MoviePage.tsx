@@ -1,7 +1,9 @@
+import {Movies} from "../../Components";
+
 export const MoviePage = () => {
     return (
         <div>
-            App
+            <Movies/>
         </div>
     );
 };

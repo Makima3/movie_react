@@ -1,12 +1,22 @@
 import {NavLink} from "react-router-dom";
 import css from './Header.module.css'
+import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
+import SvgIcon from "@mui/icons-material/AccountCircleSharp";
 
 export const Header = () => {
     return (
         <div className={css.Header}>
-            <NavLink to={'movie'}>Movies</NavLink>
-            <NavLink to={'genre'}>Genges</NavLink>
-            <NavLink to={'search'}>Search</NavLink>
+            <div className={css.Links}>
+                <NavLink to={'movie'}>Movies</NavLink>
+                <NavLink to={'genre'}>Genres</NavLink>
+                <NavLink to={'search'}>Search</NavLink>
+            </div>
+            <div className={css.Icon}>
+                <SvgIcon fontSize="large">
+                    <AccountCircleSharpIcon/>
+                </SvgIcon>
+                <p>Mark Twen</p>
+            </div>
         </div>
     );
 };
