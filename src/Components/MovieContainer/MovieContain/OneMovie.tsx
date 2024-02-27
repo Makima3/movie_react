@@ -1,5 +1,8 @@
 import {FC} from "react";
+
+
 import {IMovie} from "../../../interfaces";
+import {urls} from "../../../const";
 interface IProps {
 movie: IMovie
 }
@@ -8,9 +11,10 @@ export const OneMovie: FC<IProps> = ({movie}) => {
 
     return (
         <div>
-            <img src={poster_path} alt={title}/>
+            <img src={`${urls.poster}/${poster_path}`} alt={title}/>
             <div>{title}</div>
             <div>{vote_average}</div>
+
         </div>
     );
 };
