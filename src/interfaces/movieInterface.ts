@@ -14,7 +14,7 @@ export interface IMovie{
     vote_average: number,
     vote_count: number
 }
-export interface IInfo{
+export interface IMovieInfo{
     page: number,
     results: IMovie[],
     "total_pages": number,
