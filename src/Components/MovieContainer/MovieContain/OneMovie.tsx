@@ -16,7 +16,8 @@ export const OneMovie: FC<IProps> = ({movie}) => {
             </div>
             <div className={css.Description}>
                 <h2>{title}</h2>
-                <p>{overview}</p>
+                <div className={css.Overview}><p>{overview}</p></div>
+                {/*<p>Release date - {release_date}</p>*/}
                 <p>{vote_average}</p>
             </div>
         </div>
