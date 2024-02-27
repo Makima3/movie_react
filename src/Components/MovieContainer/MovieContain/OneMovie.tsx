@@ -14,7 +14,6 @@ export const OneMovie: FC<IProps> = ({movie}) => {
             <img src={`${urls.poster}/${poster_path}`} alt={title}/>
             <div>{title}</div>
             <div>{vote_average}</div>
-
         </div>
     );
 };
