@@ -18,14 +18,16 @@ export const Movies = () => {
     },[page])
 
     return (
+        <>
         <div className={css.Cards}>
             {
                 movies.map(movie => <OneMovie key={movie.id} movie={movie}/>)
             }
-            <div>
-                <PaginationMovies/>
-            </div>
         </div>
+    <div>
+        <PaginationMovies/>
+    </div>
+        </>
     );
 };
 
