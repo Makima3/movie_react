@@ -3,11 +3,13 @@ import {FC} from "react";
 import css from './OneMovie.module.css'
 import {IMovie} from "../../../interfaces";
 import {urls} from "../../../const";
+
 interface IProps {
-movie: IMovie
+    movie: IMovie
 }
+
 export const OneMovie: FC<IProps> = ({movie}) => {
-    const { title,poster_path, vote_average, overview} = movie
+    const {title, poster_path, vote_average, overview} = movie
 
     return (
         <div className={css.Card}>

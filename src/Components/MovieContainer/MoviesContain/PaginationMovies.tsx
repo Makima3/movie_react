@@ -4,8 +4,9 @@ import {SetURLSearchParams} from "react-router-dom";
 
 
 interface IProps {
-setQuery: SetURLSearchParams
+    setQuery: SetURLSearchParams
 }
+
 export const PaginationMovies: FC<IProps> = () => {
     return (
         <div>

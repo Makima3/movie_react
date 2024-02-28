@@ -8,9 +8,9 @@ export const Genres = () => {
 
     const [genres, setGenres] = useState<IGenre[]>([])
 
-    useEffect(()=> {
-        genreService.getAll().then(({data: {genres}})=> setGenres(genres))
-    },[])
+    useEffect(() => {
+        genreService.getAll().then(({data: {genres}}) => setGenres(genres))
+    }, [])
     return (
         <div className={css.Genres}>
             {

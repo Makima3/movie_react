@@ -1,7 +1,8 @@
 import {NavLink} from "react-router-dom";
-import css from './Header.module.css'
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import SvgIcon from "@mui/icons-material/AccountCircleSharp";
+
+import css from './Header.module.css'
 
 export const Header = () => {
     return (
@@ -16,8 +17,8 @@ export const Header = () => {
                     <AccountCircleSharpIcon/>
                 </SvgIcon>
                 <div className={css.Name}>
-                <p>Gojo</p>
-                <p>Satoru</p>
+                    <p>Gojo</p>
+                    <p>Satoru</p>
                 </div>
             </div>
         </div>
