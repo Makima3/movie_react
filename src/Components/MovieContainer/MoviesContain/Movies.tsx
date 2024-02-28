@@ -1,12 +1,11 @@
 import {useEffect, useState} from "react";
+import {useSearchParams} from "react-router-dom";
 
 import {IMovie} from "../../../interfaces";
 import {movieService} from "../../../services";
 import {OneMovie} from "../MovieContain/OneMovie";
 import css from './Movies.module.css'
-import {useSearchParams} from "react-router-dom";
 import { PaginationMovies} from "./PaginationMovies";
-
 
 export const Movies = () => {
     const [movies, setMovies] = useState<IMovie[]>([])
@@ -24,8 +23,8 @@ export const Movies = () => {
                 movies.map(movie => <OneMovie key={movie.id} movie={movie}/>)
             }
         </div>
-    <div>
-        <PaginationMovies/>
+    <div className={css.Pagination}>
+        <PaginationMovies setQuery={setQuery}/>
     </div>
         </>
     );

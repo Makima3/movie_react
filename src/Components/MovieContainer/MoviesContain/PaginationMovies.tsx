@@ -1,14 +1,14 @@
 import Pagination from '@mui/material/Pagination';
 import {FC} from "react";
+import {SetURLSearchParams} from "react-router-dom";
 
-import css from './Movies.module.css'
 
 interface IProps {
-
+setQuery: SetURLSearchParams
 }
 export const PaginationMovies: FC<IProps> = () => {
     return (
-        <div className={css.Pagination}>
+        <div>
             <Pagination count={500}
                         boundaryCount={2}
                         shape="rounded"

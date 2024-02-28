@@ -15,10 +15,10 @@ export const Header = () => {
                 <SvgIcon fontSize="large">
                     <AccountCircleSharpIcon/>
                 </SvgIcon>
-                <span>
+                <div className={css.Name}>
                 <p>Gojo</p>
                 <p>Satoru</p>
-                </span>
+                </div>
             </div>
         </div>
     );

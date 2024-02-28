@@ -5,6 +5,9 @@
     margin: 30px 0 0 50px;
 }
 .Pagination{
+    display: flex;
+    width: 100%;
     margin-top: 50px;
-    width: 1000px;
+    justify-content: center;
+    align-items: center;
 }
