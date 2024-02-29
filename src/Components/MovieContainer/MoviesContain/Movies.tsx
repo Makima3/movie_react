@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
 
-import {IMovie} from "../../../interfaces";
+import {IMovie, IMovieInfo} from "../../../interfaces";
 import {movieService} from "../../../services";
 import {OneMovie} from "../MovieContain/OneMovie";
 import css from './Movies.module.css'
@@ -10,10 +10,15 @@ import {PaginationMovies} from "./PaginationMovies";
 export const Movies = () => {
     const [movies, setMovies] = useState<IMovie[]>([])
     const [query, setQuery] = useSearchParams({page: '1'})
+    const [pagesNumber, setPagesNumber] = useState<number>(500)
     const page = query.get('page')
 
     useEffect(() => {
-        movieService.getAll(page).then(({data: {results}}) => setMovies(results))
+        movieService.getAll(page).then(({data}) => {
+            setMovies(data.results)
+            setPagesNumber(data.total_pages)
+        })
+
     }, [page])
 
     return (
@@ -24,7 +29,7 @@ export const Movies = () => {
                 }
             </div>
             <div className={css.Pagination}>
-                <PaginationMovies setQuery={setQuery}/>
+                <PaginationMovies setQuery={setQuery} page={page} pagesNumber={pagesNumber}/>
             </div>
         </>
     );
