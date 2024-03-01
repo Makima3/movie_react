@@ -3,6 +3,7 @@ import {FC} from "react";
 import css from './OneMovie.module.css'
 import {IMovie} from "../../../interfaces";
 import {urls} from "../../../const";
+import {MovieRait} from "./MovieRait";
 
 interface IProps {
     movie: IMovie
@@ -20,6 +21,9 @@ export const OneMovie: FC<IProps> = ({movie}) => {
                 <h2>{title}</h2>
                 <div className={css.Overview}><p>{overview}</p></div>
                 <p>{vote_average}</p>
+            </div>
+            <div>
+                <MovieRait vote_average={vote_average}/>
             </div>
         </div>
     );
