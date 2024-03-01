@@ -2,7 +2,7 @@ import {Rating} from "@mui/material";
 import {FC} from "react";
 import StarIcon from '@mui/icons-material/Star';
 
-interface IProps{
+interface IProps {
     vote_average: number
 }
 
