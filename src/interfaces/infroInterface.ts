@@ -15,7 +15,7 @@ export interface IOneMovieInfo {
     "popularity": number,
     "poster_path": string,
     "production_companies": IProductionCompanies[],
-    "production_countries": IProductionCompanies[],
+    "production_countries": IProductionCountries[],
     "release_date": string,
     "revenue": number,
     "runtime": number,
