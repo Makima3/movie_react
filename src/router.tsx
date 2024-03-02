@@ -10,5 +10,4 @@ export const router = createBrowserRouter([
             {path: 'genre', element: <Genre/>},
             {path: 'search', element: <Search/>}
         ]}
-
 ])
