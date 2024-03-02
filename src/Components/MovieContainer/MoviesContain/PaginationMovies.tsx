@@ -24,7 +24,6 @@ export const PaginationMovies: FC<IProps> = ({setQuery, page, pagesNumber}) => {
                         shape="rounded"
                         size={'large'}
                         color={'primary'}
-                        variant="outlined"
             />
         </div>
 

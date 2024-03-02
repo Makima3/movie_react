@@ -2,7 +2,7 @@ import {FC} from "react";
 
 import css from './OneMovie.module.css'
 import {IMovie} from "../../../interfaces";
-import {urls} from "../../../const";
+import {noPoster, urls} from "../../../const";
 import {MovieRait} from "./MovieRait";
 
 interface IProps {
@@ -15,7 +15,7 @@ export const OneMovie: FC<IProps> = ({movie}) => {
     return (
         <div className={css.Card}>
             <div className={css.PosterImage}>
-                <img src={`${urls.poster}/${poster_path}`} alt={title}/>
+                <img src={poster_path ? `${urls.poster}/${poster_path}`: noPoster} alt={title}/>
             </div>
             <div className={css.Description}>
                 <h2>{title}</h2>
