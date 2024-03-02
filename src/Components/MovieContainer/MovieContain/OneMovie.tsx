@@ -2,7 +2,7 @@ import {FC} from "react";
 
 import css from './OneMovie.module.css'
 import {IMovie} from "../../../interfaces";
-import {noPoster, urls} from "../../../const";
+import {urls} from "../../../const";
 import {MovieRait} from "./MovieRait";
 import {useNavigate} from "react-router-dom";
 
@@ -19,7 +19,8 @@ export const OneMovie: FC<IProps> = ({movie}) => {
     return (
         <div className={css.Card} onClick={() => navigate(`/movie/${id}`)}>
             <div className={css.PosterImage}>
-                <img src={poster_path ? `${urls.poster}/${poster_path}` : noPoster} alt={title}/>
+                {poster_path ? <img src={`${urls.poster}/${poster_path}`} alt={title}/> :
+                    <img src={'https://i.pinimg.com/736x/be/aa/4b/beaa4b06ec621368d665eccc509c42c0.jpg'}/>}
             </div>
             <div className={css.Description}>
                 <h2>{title}</h2>
