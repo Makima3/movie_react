@@ -23,7 +23,6 @@ export const InfoMovies: FC<IProps> = ({id}) => {
             {
                 actors.map(item => <Actors key={item.id} item={item}/>)
             }
-            {/* eslint-disable-next-line react/jsx-no-undef */}
             {oneMovie && <InfoOneMovie oneMovie={oneMovie}/>}
         </div>
     );
