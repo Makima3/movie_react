@@ -8,13 +8,13 @@ interface IProps {
 }
 export const Genre: FC<IProps> = ({item}) => {
 
-    const {name} = item
+    const {id, name} = item
 
     const navigate = useNavigate()
 
     return (
         <div>
-            <div className={css.Genre} onClick={()=> navigate}><h1>{name}</h1></div>
+            <div className={css.Genre} onClick={()=> navigate(`${id}`) }><h1>{name}</h1></div>
         </div>
     );
 };

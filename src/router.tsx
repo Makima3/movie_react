@@ -8,7 +8,8 @@ export const router = createBrowserRouter([
             {path: 'movie', element: <MoviePage/>},
             {path: 'movie/:id', element:<InfoMoviePage/>},
             {path: 'genre', element: <Genre/>},
-            {path: 'search', element: <Search/>},
-            {path: 'genreId', element:<GenreMoviePage/>}
+            {path: 'genres/:id', element:<GenreMoviePage/>},
+            {path: 'search', element: <Search/>}
+
         ]}
 ])
