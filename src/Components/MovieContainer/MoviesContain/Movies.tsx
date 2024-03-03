@@ -1,25 +1,20 @@
-import {useEffect, useState} from "react";
-import {useSearchParams} from "react-router-dom";
+import {FC, useEffect, useState} from "react";
+import {SetURLSearchParams, useSearchParams} from "react-router-dom";
 
-import {IMovie, IMovieInfo} from "../../../interfaces";
+import {IMovie} from "../../../interfaces";
 import {movieService} from "../../../services";
 import {OneMovie} from "../MovieContain/OneMovie";
 import css from './Movies.module.css'
 import {PaginationMovies} from "./PaginationMovies";
 
-export const Movies = () => {
-    const [movies, setMovies] = useState<IMovie[]>([])
-    const [query, setQuery] = useSearchParams({page: '1'})
-    const [pagesNumber, setPagesNumber] = useState<number>(500)
-    const page = query.get('page')
+interface IProps {
+    movies: IMovie[]
+    setQuery: SetURLSearchParams
+    pagesNumber: number
+    page: string
+}
 
-    useEffect(() => {
-        movieService.getAll(page).then(({data}) => {
-            setMovies(data.results)
-            setPagesNumber(data.total_pages)
-        })
-
-    }, [page])
+export const Movies: FC<IProps> = ({movies, setQuery, page, pagesNumber}) => {
 
     return (
         <>

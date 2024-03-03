@@ -13,9 +13,9 @@ const urls = {
     movies,
     poster,
     movie: {
-        byId:(id: string)=> `${movie}/${id}`
+        byId: (id: string) => `${movie}/${id}`
     },
-    actors:{
+    actors: {
         byId: (id: string) => `${actors}/${id}/credits`
     }
 }

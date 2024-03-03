@@ -12,7 +12,8 @@ export interface ICast {
     credit_id: string,
     order: number
 }
-export interface IActors{
+
+export interface IActors {
     id: number,
     cast: ICast[],
     crew: any[]

@@ -20,7 +20,7 @@ export const OneMovie: FC<IProps> = ({movie}) => {
         <div className={css.Card} onClick={() => navigate(`/movie/${id}`)}>
             <div className={css.PosterImage}>
                 {poster_path ? <img src={`${urls.poster}/${poster_path}`} alt={title}/> :
-                    <img src={noPoster}/>}
+                    <img src={noPoster} alt={title}/>}
             </div>
             <div className={css.Description}>
                 <h2>{title}</h2>
