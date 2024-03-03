@@ -7,11 +7,13 @@ const noImage = 'https://i.pinimg.com/736x/82/36/72/823672c13802854000931c67616b
 const noPoster = 'https://i.pinimg.com/736x/be/aa/4b/beaa4b06ec621368d665eccc509c42c0.jpg'
 const movie = '/movie'
 const actors = '/movie'
+const search = '/search/movie'
 
 const urls = {
     genre,
     movies,
     poster,
+    search,
     movie: {
         byId: (id: string) => `${movie}/${id}`
     },
