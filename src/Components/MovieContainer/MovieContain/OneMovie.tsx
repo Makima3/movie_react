@@ -5,7 +5,6 @@ import {IMovie} from "../../../interfaces";
 import {noPoster, urls} from "../../../const";
 import {MovieRait} from "./MovieRait";
 import {useNavigate} from "react-router-dom";
-import Badge from "@mui/material/Badge";
 
 interface IProps {
     movie: IMovie
