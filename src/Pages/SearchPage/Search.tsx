@@ -4,7 +4,7 @@ import css from './Search.module.css'
 
 export const Search = () => {
     return (
-        <div  className={css.GeneralBlock}>
+        <div className={css.GeneralBlock}>
             <SearchForm/>
             <Outlet/>
         </div>

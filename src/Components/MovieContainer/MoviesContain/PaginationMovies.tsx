@@ -10,7 +10,6 @@ interface IProps {
 
 export const PaginationMovies: FC<IProps> = ({setQuery, page, pagesNumber}) => {
 
-
     const change = (event: ChangeEvent<unknown>, page: number) => {
         setQuery({page: `${page}`})
         window.scroll(0, 0)
@@ -26,7 +25,6 @@ export const PaginationMovies: FC<IProps> = ({setQuery, page, pagesNumber}) => {
                         color={'primary'}
             />
         </div>
-
     );
 };
 

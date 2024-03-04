@@ -21,7 +21,7 @@ export const MoviePage = () => {
 
     return (
         <div>
-            <Movies movies={movies} page={page} setQuery={setQuery} pagesNumber={pagesNumber} />
+            <Movies movies={movies} page={page} setQuery={setQuery} pagesNumber={pagesNumber}/>
         </div>
     );
 };

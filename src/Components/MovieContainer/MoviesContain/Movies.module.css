@@ -1,11 +1,12 @@
-.Cards{
+.Cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin: 30px 0 0 50px;
 
 }
-.Pagination{
+
+.Pagination {
     display: flex;
     width: 100%;
     margin-top: 50px;

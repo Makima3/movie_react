@@ -47,3 +47,7 @@ p {
 .Card:hover .Description {
     bottom: -20px;
 }
+.NoPoster{
+    width: 300px;
+    height: 450px;
+}

@@ -1,4 +1,4 @@
-.Image{
+.Image {
     width: 150px;
     height: 200px;
     border-radius: 5px;
@@ -6,7 +6,8 @@
     box-shadow: 15px 15px 30px #bebebe,
     -15px -15px 30px #ffffff;
 }
-.Actor{
+
+.Actor {
     display: grid;
-    gap:20px;
+    gap: 20px;
 }

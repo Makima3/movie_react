@@ -6,6 +6,7 @@ import {noPoster, urls} from "../../../const";
 import {MovieRait} from "./MovieRait";
 import {useNavigate} from "react-router-dom";
 
+
 interface IProps {
     movie: IMovie
 }
@@ -20,7 +21,7 @@ export const OneMovie: FC<IProps> = ({movie}) => {
         <div className={css.Card} onClick={() => navigate(`/movie/${id}`)}>
             <div className={css.PosterImage}>
                 {poster_path ? <img src={`${urls.poster}/${poster_path}`} alt={title}/> :
-                    <img src={noPoster} alt={title}/>}
+                    <img className={css.NoPoster} src={noPoster} alt={title}/>}
             </div>
             <div className={css.Description}>
                 <h2>{title}</h2>
