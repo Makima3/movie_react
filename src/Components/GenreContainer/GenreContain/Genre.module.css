@@ -2,16 +2,30 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 100px;
+    width: 230px;
+    height: 90px;
     border: solid 1px black;
+    gap: 30px;
 }
 
-.cards .card:hover {
-    transform: scale(1.1, 1.1);
+.Genre {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+    transition: 0.5s;
+    transition-property: box-shadow;
 }
 
-.cards:hover > .card:not(:hover) {
-    filter: blur(10px);
-    transform: scale(0.9, 0.9);
+.Genre{
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+.Genre:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(89, 160, 244),
+    0 0 25px rgb(89, 160, 244),
+    0 0 45px rgb(89, 160, 244),
+    0 0 90px rgb(89, 160, 244);
 }

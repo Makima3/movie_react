@@ -8,9 +8,9 @@ export const Header = () => {
     return (
         <div className={css.Header}>
             <div className={css.Links}>
-                <NavLink to={'movie'}>Movies</NavLink>
-                <NavLink to={'genre'}>Genres</NavLink>
-                <NavLink to={'search'}>Search</NavLink>
+                <NavLink to={'movie'}><b>Movies</b></NavLink>
+                <NavLink to={'genre'}><b>Genres</b></NavLink>
+                <NavLink to={'search'}><b>Search</b></NavLink>
             </div>
             <div className={css.Icon}>
                 <SvgIcon fontSize="large">

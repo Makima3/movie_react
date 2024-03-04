@@ -1,4 +1,12 @@
 .Image{
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #ffffff;
+}
+.Actor{
+    display: grid;
+    gap:20px;
 }

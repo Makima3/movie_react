@@ -10,16 +10,15 @@ interface IProps {
     item: ICast
 }
 
-const handleDragStart = (e: React.DragEvent<HTMLImageElement>) => e.preventDefault();
 export const Actors: FC<IProps> = ({item}) => {
     const {name, profile_path} = item
 
     return (
         <div>
-            <div onDragStart={handleDragStart}>
-                {profile_path ? <img src={`${urls.poster}/${profile_path}`} alt={name}/> :
+            <div className={css.Actor}>
+                {profile_path ? <img src={`${urls.poster}/${profile_path}`} alt={name} className={css.Image}/> :
                     <img className={css.Image} src={noImage} alt={name}/>}
-                <div>Name:{name}</div>
+                <div><p>{name}</p></div>
             </div>
         </div>
     );
