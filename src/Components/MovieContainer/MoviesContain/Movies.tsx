@@ -1,8 +1,7 @@
-import {FC, useEffect, useState} from "react";
-import {SetURLSearchParams, useSearchParams} from "react-router-dom";
+import {FC} from "react";
+import {SetURLSearchParams} from "react-router-dom";
 
 import {IMovie} from "../../../interfaces";
-import {movieService} from "../../../services";
 import {OneMovie} from "../MovieContain/OneMovie";
 import css from './Movies.module.css'
 import {PaginationMovies} from "./PaginationMovies";
